@@ -1,0 +1,18 @@
+{
+    "name": "commerce/customer_info_prepopulate",
+    "description": "Prepopulate customer info in checkout pane.",
+    "type": "drupal-custom-module",
+    "homepage": "https://bitbucket.org/jmaerckaert/commerce",
+    "authors": [
+        {
+            "name": "Jonathan Maerckaert (jmaerckaert)",
+            "homepage": "https://bitbucket.org/jmaerckaert/commerce",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "source": "https://bitbucket.org/jmaerckaert/commerce"
+    },
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+}

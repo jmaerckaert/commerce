@@ -1,0 +1,7 @@
+name: Custmer info prepopulate
+type: module
+description: 'Prepopulate customer info in invoice checkout pane.'
+package: Custom
+core: 8.x
+dependencies:
+  - commerce_checkout

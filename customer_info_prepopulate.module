@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Prepopulate customer info in checkout flows.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function customer_info_prepopulate_form_commerce_checkout_flow_multistep_default_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  if ($form['#step_id'] === 'order_information') {
+    $user = User::load(\Drupal::currentUser()->id());
+    $profile_storage = Drupal::entityTypeManager()->getStorage('profile');
+    $element_profile = $profile_storage->load(\Drupal::currentUser()->id());
+
+    $form['billing_information']['profile']['#default_value'] = $element_profile;
+  }
+}
